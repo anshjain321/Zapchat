@@ -35,7 +35,7 @@ const FriendRequestsSidebarOption: FC<
           pusherClient.unbind('incoming_friend_requests' , friendRequestHandler)
           pusherClient.unbind('new friend' , addedFriendHandler)
       }
-     },[])
+     },[sessionId])
   
   return (
     <Link
