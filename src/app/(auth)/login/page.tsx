@@ -3,6 +3,7 @@ import Button from '@/components/ui/button'
 import { FC, useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { toast } from 'react-hot-toast'
+import Image from 'next/image'
 
 const Page: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -24,7 +25,7 @@ const Page: FC = () => {
       <div className='flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8'>
         <div className='w-full flex flex-col items-center max-w-md space-y-8'>
           <div className='flex flex-col items-center gap-8'>
-            logo
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48"> <path fill="#0f0" d="M35,6H13c-3.866,0-7,3.134-7,7v22c0,3.866,3.134,7,7,7h22c3.866,0,7-3.134,7-7V13 C42,9.134,38.866,6,35,6z"></path><path fill="#fff" d="M24,12c-7.18,0-13,4.925-13,11c0,4.074,2.624,7.622,6.513,9.523C16.931,33.773,16.087,34.949,15,36 c2.162-0.38,4.191-1.175,5.937-2.32C21.921,33.882,22.943,34,24,34c7.18,0,13-4.925,13-11S31.18,12,24,12z"></path> </svg>
             <h2 className='mt-6 text-center text-3xl font-bold tracking-tight text-gray-900'>
               Sign in to your account
             </h2>
