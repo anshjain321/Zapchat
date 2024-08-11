@@ -3,7 +3,6 @@ import Button from '@/components/ui/button'
 import { FC, useState } from 'react'
 import { signIn } from 'next-auth/react'
 import { toast } from 'react-hot-toast'
-import Image from 'next/image'
 
 const Page: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false)

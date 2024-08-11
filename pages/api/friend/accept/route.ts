@@ -43,12 +43,12 @@ export default async function handler(req:NextApiRequest , res: NextApiResponse)
       const friend = JSON.parse(friendRaw) as User
 
       await Promise.all([
-        pusherServer.trigger(
+      await  pusherServer.trigger(
           toPusherkey(`user:${idToAdd}:friends`),
           'new_friend',
           user
         ),
-        pusherServer.trigger(
+      await  pusherServer.trigger(
           toPusherkey(`user:${session.user.id}:friends`),
           'new_friend',
           friend

@@ -51,8 +51,8 @@ export default async function handler(req: NextApiRequest , res: NextApiResponse
 
     const message = messageValidator.parse(messageData)
      
-    pusherServer.trigger(toPusherkey(`chat:${chatId}`), 'incoming-message', message)
-    pusherServer.trigger(toPusherkey(`user:${friendId}:chats`), 'new_message',{
+    await pusherServer.trigger(toPusherkey(`chat:${chatId}`), 'incoming-message', message)
+  await pusherServer.trigger(toPusherkey(`user:${friendId}:chats`), 'new_message',{
      ...message,
      senderImg: sender.image,
      senderName: sender.name,

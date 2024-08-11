@@ -44,7 +44,7 @@ export default async function handler(req: NextApiRequest,res:NextApiResponse) {
              res.status(400).json({ message: 'Already friends with this user' });
             return 
         }
-        pusherServer.trigger(
+        await pusherServer.trigger(
             toPusherkey(`user:${idToAdd}:incoming_friend_requests`),'incoming_fiend_requests',
                 {
                     senderId:session.user.id,
